@@ -118,7 +118,7 @@ This document will explore the Iris dataset with a view to describing it such th
 
  
 
-<h2 id="data">The Data</a>
+<h2 id="data">The Data</h2>
 ========
 
 ### High Level overview ###
@@ -135,7 +135,7 @@ As with any dataset, the first step in the process is to visually look through t
 
 Having browsed visually over the data, all columns seem to be homogenous. However, we can get Python to perform a quick overview of the data using *info()*. From this we have:
 
-<img src="images/000012.png">Screen-grab 1 Information</img>
+<img src="images/000012.png"> Screen-grab 1 Information</img>
 
 This shows that:
 
@@ -149,71 +149,49 @@ This shows that:
 
 We can further see from counting the rows by ‘species’ type that:
 
-![Image](images/000002.png){.calibre9}
+<img src="images/000002.png> Screen-grab 2 Value Counts</img>
 
-Screen-grab 2 Value Counts
+This shows that the data is spread evenly amongst three values in ‘species’. Namely; ‘virginica’, ‘setosa’ and ‘versicolor’ with 50 rows of data each.
 
-This shows that the data is spread evenly amongst three values in
-‘species’. Namely; ‘virginica’, ‘setosa’ and ‘versicolor’ with 50 rows
-of data each.
+Two separate scripts were written to examine the dataset. The code for the first of these, from which the graphs in this document were derived, can be seen in <a href=#app1>Appendix A</a>. The second script which provides a high-level analysis of the dataset can be seen in <a href=#app2>Appendix B</a>.
 
-Two separate scripts were written to examine the dataset. The code for
-the first of these, from which the graphs in this document were derived,
-can be seen in Appendix A. The second script which provides a high-level
-analysis of the dataset can be seen in Appendix B.
-
-High level analysis {#calibre_link-8 .block_10}
+<h2 id="anal">High level analysis </h2>
 ===================
 
-The data {#calibre_link-9 .block_20}
+### The data ###
 --------
 
-The Iris dataset contains three subsets of data. One for each species of
-Iris in the dataset. In looking at the data we can parse the dataset
-into its three subsets and examine the data from the following
-standpoints:
+The Iris dataset contains three subsets of data. One for each species of Iris in the dataset. In looking at the data we can parse the dataset into its three subsets and examine the data from the following standpoints:
 
 -   Is the data intact. Are there empty values, gaps, errors?
--   What are the maximum, minimum, standard deviation, mean and
-    Inter-quartile range (IQR) values?
+-   What are the maximum, minimum, standard deviation, mean and Inter-quartile range (IQR) values?
 -   Are there outliers in the data subsets?
 
-If the data is intact and have no (or almost no) outliers then we can
-start to make assumptions (prove hypotheses) based on the data.
+If the data is intact and have no (or almost no) outliers then we can start to make assumptions (prove hypotheses) based on the data.
 
-Subsets {#calibre_link-10 .block_20}
+### Subsets ###
 -------
 
-From ‘Screen Grab 2 Value Counts’ above, we can see there are three
-distinct species of Iris referred to in the dataset. These are:
+From ‘Screen Grab 2 Value Counts’ above, we can see there are three distinct species of Iris referred to in the dataset. These are:
 
 -   Setosa
 -   Virginica
 -   Versicolor
 
-Using the modules PANDAS and NUMPY within Python, we can import the
-data, examine it for outliers and report on the variables (Min, Max,
-Mean, StDev & IQR)
+Using the modules PANDAS and NUMPY within Python, we can import the data, examine it for outliers and report on the variables (Min, Max, Mean, StDev & IQR)
 
-The script in Appendix B was designed such that (with little
-modification) it can be used on any similar dataset containing numerical
-variables for given groups.
+The script in Appendix B was designed such that (with little modification) it can be used on any similar dataset containing numerical variables for given groups.
 
 The output from this analysis is as follows:
 
-### Setosa {#calibre_link-11 .block_25}
+### Setosa ###
 
-![Image](images/000003.png){.calibre10}
-
-Screen-grab 3 - Statistical Values Setosa
-
+<img src="images/000003.png"> Screen-grab 3 - Statistical Values Setosa</img>
  
 
-### Versicolor {#calibre_link-12 .block_25}
+### Versicolor ###
 
-![Image](images/000006.png){.calibre11}
-
-Screen-grab 4 Statistical Values Versicolor
+<img src="images/000006.png"> Screen-grab 4 Statistical Values Versicolor</img>
 
  
 
