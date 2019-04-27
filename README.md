@@ -99,9 +99,7 @@ From either of these Command Line Interface tools, move to the folder you’ve s
 <h2 id="back">Background</h2>
 ==========
 
-The Iris Dataset was collected by Edgar Anderson in 1935 and published
-by Ronald Fisher in 1936 (Wikipedia, 2019). It is a set of measurements
-of three species of Iris flowers. The measurements taken are:
+The Iris Dataset was collected by Edgar Anderson in 1935 and published by Ronald Fisher in 1936 (Wikipedia, 2019). It is a set of measurements of three species of Iris flowers. The measurements taken are:
 
 -   Petal length
 -   Petal width
@@ -110,52 +108,34 @@ of three species of Iris flowers. The measurements taken are:
 
 <img src="images/000004.png">Photo 1 Iris Flowers (Willems, 2018)</img>
 
-Fifty of these measurements were recorded for each of the three species
-of Iris flower giving a dataset of 150 rows and 5 columns. The
-measurements of width and length are decimal numbers to one decimal
-place precision. The fifth column holds a text value denoting which
-species of Iris flower the measurements are associated with.
+Fifty of these measurements were recorded for each of the three species of Iris flower giving a dataset of 150 rows and 5 columns. The measurements of width and length are decimal numbers to one decimal place precision. The fifth column holds a text value denoting which species of Iris flower the measurements are associated with.
 
-However, recent studies have shown that there is more than one Iris data
-set in the public domain. Indeed, Bezdek et al (Bezdek, 1999) found that
-there is at least one other version which has errors in the dataset.
+However, recent studies have shown that there is more than one Iris data set in the public domain. Indeed, Bezdek et al (Bezdek, 1999) found that there is at least one other version which has errors in the dataset.
 
-Notwithstanding the above, the Iris dataset (in its various versions)
-has been used both as a pedagogical tool and as a test dataset for
-Machine Learning (ML) algorithms (Joseph, 2018). Machine Learning being
-defined as “teaching computers how to learn without the need to be
-programmed for specific tasks. In fact, the key idea behind ML is that
-it is possible to create algorithms that learn from and make predictions
-on data” (Maglaras, 2018)
+Notwithstanding the above, the Iris dataset (in its various versions) has been used both as a pedagogical tool and as a test dataset for Machine Learning (ML) algorithms (Joseph, 2018). Machine Learning being defined as “teaching computers how to learn without the need to be programmed for specific tasks. In fact, the key idea behind ML is that it is possible to create algorithms that learn from and make predictions on data” (Maglaras, 2018)
 
-This document will explore the Iris dataset with a view to describing it
-such that the reader can know what it contains and tells.
+This document will explore the Iris dataset with a view to describing it such that the reader can know what it contains and tells.
 
  
 
-The Data {#calibre_link-4 .block_10}
+<h2 id="data">The Data</a>
 ========
 
-High Level overview {#calibre_link-5 .block_20}
+### High Level overview ###
 -------------------
 
-As with any dataset, the first step in the process is to visually look
-through the dataset to:
+As with any dataset, the first step in the process is to visually look through the dataset to:
 
 1.  Understand what the data contained shows
 2.  Get a sense of the data
 3.  Be aware of any errors or anomalies
 4.  Know the key attributes of the data
 
-### Visual inspection {#calibre_link-6 .block_25}
+### Visual inspection ###
 
-Having browsed visually over the data, all columns seem to be
-homogenous. However, we can get Python to perform a quick overview of
-the data using *info()*. From this we have:
+Having browsed visually over the data, all columns seem to be homogenous. However, we can get Python to perform a quick overview of the data using *info()*. From this we have:
 
-![Image](images/000012.png){.calibre8}
-
-Screen-grab 1 Information
+<img src="images/000012.png">Screen-grab 1 Information</img>
 
 This shows that:
 
@@ -165,7 +145,7 @@ This shows that:
 -   The 4 length and width columns are decimal data (float64)
 -   Each column has a specific label
 
-### Closer examination {#calibre_link-7 .block_25}
+### Closer examination ###
 
 We can further see from counting the rows by ‘species’ type that:
 
