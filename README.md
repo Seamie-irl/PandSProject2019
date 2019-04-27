@@ -211,94 +211,60 @@ The output from this analysis is as follows:
 
 *Screen-grab 5 Statistical Values Virginica*
 
-\
  
 
- 
-
-Conclusion {#calibre_link-14 .block_20}
+### Conclusion ###
 ----------
 
-In summary, in the Iris dataset there are four numerical variables and
-one categorical variable with 50 rows of data in each category and no
-null values. Except for one value in one species, there are no outliers,
-no errors and no null values in the dataset.
+In summary, in the Iris dataset there are four numerical variables and one categorical variable with 50 rows of data in each category and no null values. Except for one value in one species, there are no outliers, no errors and no null values in the dataset.
 
-As a result of this, the raw data would suggest that we may be able to
-distinguish between three species of the Iris flower based on four
-measurements. However, whilst looking at the statistical data values
-will assist the reader in understanding the differences between the Iris
-species, it is in visualising the data; seeing how the data is displayed
-on a chart that the reader can immediately tell the differences in the
-data.
+As a result of this, the raw data would suggest that we may be able to distinguish between three species of the Iris flower based on four measurements. However, whilst looking at the statistical data values will assist the reader in understanding the differences between the Iris species, it is in visualising the data; seeing how the data is displayed on a chart that the reader can immediately tell the differences in the data.
 
-Visual analysis {#calibre_link-15 .block_10}
+<h2 id="vis">Visual analysis</h2>
 ===============
 
-Whereas a visual inspection of raw data will give us an understanding of
-the integrity of the data, using python, we can start to examine the
-Iris dataset at a high level visually. Being able to see how the data is
-represented on a graph gives us a more immediate decision on what the
-data is telling us.
+Whereas a visual inspection of raw data will give us an understanding of the integrity of the data, using python, we can start to examine the Iris dataset at a high level visually. Being able to see how the data is represented on a graph gives us a more immediate decision on what the data is telling us.
 
-Sepal length v. Sepal width {#calibre_link-16 .block_20}
+Sepal length v. Sepal width 
 ---------------------------
 
 Plotting all values in Sepal length against Sepal width we get:
 
 ![Image](images/000009.png){.calibre14}
 
-Graph 1 Plot of all sepal values
+*Graph 1 Plot of all sepal values*
 
-At first glance in Graph 1, we can see that the data largely aggregates
-into two suggestive groups. The first predominantly in the upper left
-quadrant and the second predominantly in the lower left and right
-quadrants. Further use of python to identify the values in the scatter
-plot by species shows us:
+At first glance in Graph 1, we can see that the data largely aggregates into two suggestive groups. The first predominantly in the upper left quadrant and the second predominantly in the lower left and right quadrants. Further use of python to identify the values in the scatter plot by species shows us:
 
  
 
-![Image](images/000011.png){.calibre15}
+![Image](images/000011.png)
 
-Graph 2 Plot of all sepal values by Species
+*Graph 2 Plot of all sepal values by Species*
 
-This shows us that our first observation above was correct in that the
-values which aggregated into the upper left quadrant belong to one
-species (*Setosa*) This group would appear to have few outliers.
-Furthermore, in the more scattered second group in the lower left and
-right quadrants, we can now see that within this range are two fairly
-distinct groups with those in the lower left quadrant belonging
-predominantly to *Versicolor* and the remainder belonging to
+This shows us that our first observation above was correct in that the values which aggregated into the upper left quadrant belong to one species (*Setosa*) This group would appear to have few outliers. Furthermore, in the more scattered second group in the lower left and right quadrants, we can now see that within this range are two fairly distinct groups with those in the lower left quadrant belonging predominantly to *Versicolor* and the remainder belonging to
 *Virginica*. However, the values for *Virginica* are well scattered.
 
-Petal length v. Petal width {#calibre_link-17 .block_20}
+### Petal length v. Petal width###
 ---------------------------
 
-Similarly, plotting all values in Petal length against Petal width we
-get:
+Similarly, plotting all values in Petal length against Petal width we get:
 
-![Image](images/000010.png){.calibre16}
+![Image](images/000010.png)
 
-Graph 3 Plot of all petal values
+*Graph 3 Plot of all petal values*
 
-However, in the above graph of all petal values we can see the data is
-divided clearly into two groups. The first in the lower left quadrant
-(small petal width and length) and the second group largely within the
-upper right quadrant (large petal width and length).
+However, in the above graph of all petal values we can see the data is divided clearly into two groups. The first in the lower left quadrant (small petal width and length) and the second group largely within the upper right quadrant (large petal width and length). 
 
-As with the Sepal values we can identify the values by species giving
-us:
+As with the Sepal values we can identify the values by species giving us:
 
-![Image](images/000005.png){.calibre17}
+![Image](images/000005.png)
 
-Graph 4 Plot of all petal values by Species
+*Graph 4 Plot of all petal values by Species*
 
-The above graph shows us more clearly that species *Setosa* again is a
-distinct and different set of values to the other two species. However,
-in the Petal values we can see a clearer distinction between the
-remaining two species (*Versicolor* and *Virginica*).
+The above graph shows us more clearly that species *Setosa* again is a distinct and different set of values to the other two species. However, in the Petal values we can see a clearer distinction between the remaining two species (*Versicolor* and *Virginica*).
 
-![Image](images/000008.png){.calibre18}
+![Image](images/000008.png)
 
 Sepal length
 
@@ -316,389 +282,171 @@ Petal width
 
 Petal width
 
-Graph 5 Graph-Grid of all variables
+*Graph 5 Graph-Grid of all variables*
 
  
 
-From the above grid of plots it is clear that from this dataset we can
-identify the species of Iris based on the interrelationship between the
-Sepal length, Septal width, Petal length and Petal width. This is more
-clearly shown in the radial visualisation plot below:
+From the above grid of plots it is clear that from this dataset we can identify the species of Iris based on the interrelationship between the Sepal length, Septal width, Petal length and Petal width. This is more clearly shown in the radial visualisation plot below:
 
 ![Image](images/000000.png){.calibre19}\
  
 
-Appendix A – Graph plot script {#calibre_link-18 .block_10}
+<h2 id="app1">Appendix A – Graph plot script </h2>
 ==============================
+# This script provides graphs for the Fisher Iris Dataset
+# Seamus Leonard 12/04/2019
+# 
 
-\# This script processes the Fisher Iris Dataset
+#Set working directory and load data
 
-\# Seamus Leonard 12/04/2019
+# import packages
+#import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import warnings # apparently seaborn generates a lot of warnings. This line and the next ignores them
+warnings.filterwarnings('ignore')
+import seaborn as sns # this is a visualisation package based on matplotlib https://seaborn.pydata.org/
+# set the plot background to white
+from pandas.tools.plotting import radviz
 
-\#
+sns.set(style="white", color_codes=True)
 
- 
+# the following code was sourced from:
+# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+# point to the folder where the dataset is located
+try:
+    # os.chdir('D:\\Programming and Scripting\\Project')
+    # load the dataset
+    iris = pd.read_csv('IrisDataset.csv')
+    iris.columns=['sepal_length','sepal_width','petal_length','petal_width','species']
+except:
+    print("Couldn't load the data")
+# keep the user informed of the state of the process
+print('Data loaded')
+print()
+# the following code was sourced from:
+# https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
+# provide the user with an overview of the dataset
+print(iris.info())
+print()
+# provided the user with a high-level report on data breakdown
+print(iris['species'].value_counts())
 
-\#Set working directory and load data
+# the following code was sourced from:
+#http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
 
- 
-
-\# import packages
-
-[import]{.text_1}[ os]{.text_2}
-
-[import]{.text_1}[ pandas ]{.text_2}[as]{.text_1}[ pd]{.text_2}
-
-[import]{.text_1}[ matplotlib.pyplot ]{.text_2}[as]{.text_1}[
-plt]{.text_2}
-
-[import]{.text_1}[ warnings ]{.text_2}[\# apparently seaborn generates a
-lot of warnings. This line and the next ignores them]{.text_3}
-
-[warnings.filterwarnings(]{.text_2}['ignore']{.text_4}[)]{.text_2}
-
-[import]{.text_1}[ seaborn ]{.text_2}[as]{.text_1}[ sns ]{.text_2}[\#
-this is a visualisation package based on matplotlib
-https://seaborn.pydata.org/]{.text_3}
-
-\# set the plot background to white
-
-[from]{.text_1}[ pandas.tools.plotting ]{.text_2}[import]{.text_1}[
-radviz]{.text_2}
-
- 
-
-[sns.set(]{.text_2}[style]{.text_5}[=]{.text_2}["white"]{.text_4}[,
-]{.text_2}[color\_codes]{.text_5}[=]{.text_2}[True]{.text_6}[)]{.text_2}
-
- 
-
-\# the following code was sourced from:
-
-\#
-https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
-
-\# point to the folder where the dataset is located
-
-[try]{.text_1}[:]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[os.chdir(]{.text_2}['D:]{.text_4}[\\\\]{.text_7}[Programming
-and Scripting]{.text_4}[\\\\]{.text_7}[Project']{.text_4}[)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[\# load the dataset]{.text_3}
-
-[[ iris =
-]{.calibre20}]{.text_2}[pd.read\_csv(]{.text_2}['IrisDataset.csv']{.text_4}[)]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[iris.columns=\[]{.text_2}['sepal\_length']{.text_4}[,]{.text_2}['sepal\_width']{.text_4}[,]{.text_2}['petal\_length']{.text_4}[,]{.text_2}['petal\_width']{.text_4}[,]{.text_2}['species']{.text_4}[\]]{.text_2}
-
-[except]{.text_1}[:]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}["Couldn't load
-the data"]{.text_4}[)]{.text_2}
-
-\# keep the user informed of the state of the process
-
-[print]{.text_8}[(]{.text_2}['Data loaded']{.text_4}[)]{.text_2}
-
-[print]{.text_8}[()]{.text_2}
-
-\# the following code was sourced from:
-
-\# https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
-
-\# provide the user with an overview of the dataset
-
-[print]{.text_8}[(iris.info())]{.text_2}
-
-[print]{.text_8}[()]{.text_2}
-
-\# provided the user with a high-level report on data breakdown
-
-[print]{.text_8}[(iris\[]{.text_2}['species']{.text_4}[\].value\_counts())]{.text_2}
-
- 
-
-\# the following code was sourced from:
-
-\#http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
-
- 
-
-[iris.plot(]{.text_2}[kind]{.text_5}[=]{.text_2}['scatter']{.text_4}[,]{.text_2}[x]{.text_5}[=]{.text_2}['sepal\_length']{.text_4}[,
-]{.text_2}[y]{.text_5}[=]{.text_2}['sepal\_width']{.text_4}[)]{.text_2}
-
-[plt.title(]{.text_2}['Sepal Values - all Species']{.text_4}[)]{.text_2}
-
+iris.plot(kind='scatter',x='sepal_length', y='sepal_width')
+plt.title('Sepal Values - all Species')
 plt.show()
 
- 
-
-[iris.plot(]{.text_2}[kind]{.text_5}[=]{.text_2}['scatter']{.text_4}[,
-]{.text_2}[x]{.text_5}[=]{.text_2}['petal\_length']{.text_4}[,]{.text_2}[y]{.text_5}[=]{.text_2}['petal\_width']{.text_4}[)]{.text_2}
-
-[plt.title(]{.text_2}['Petal Values - all Species']{.text_4}[)]{.text_2}
-
+iris.plot(kind='scatter', x='petal_length',y='petal_width')
+plt.title('Petal Values - all Species')
 plt.show()
 
- 
-
-[sns.FacetGrid(iris,
-]{.text_2}[hue]{.text_5}[=]{.text_2}['species']{.text_4}[,
-]{.text_2}[size]{.text_5}[=]{.text_2}[5]{.text_9}[) \\]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[.map(plt.scatter,
-]{.text_2}['sepal\_length']{.text_4}[,
-]{.text_2}['sepal\_width']{.text_4}[) \\]{.text_2}
-
-[ ]{.calibre20}.add\_legend()
-
-[plt.title(]{.text_2}['Sepal values by Species']{.text_4}[)]{.text_2}
-
+sns.FacetGrid(iris, hue='species', size=5) \
+   .map(plt.scatter, 'sepal_length', 'sepal_width') \
+   .add_legend()
+plt.title('Sepal values by Species')
 plt.show()
 
- 
-
-[sns.FacetGrid(iris,
-]{.text_2}[hue]{.text_5}[=]{.text_2}['species']{.text_4}[,]{.text_2}[size]{.text_5}[=]{.text_2}[5]{.text_9}[)\\]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[.map(plt.scatter,]{.text_2}['petal\_length']{.text_4}[,]{.text_2}['petal\_width']{.text_4}[)\\]{.text_2}
-
-[ ]{.calibre20}.add\_legend()
-
-[plt.title(]{.text_2}['Petal values by Species']{.text_4}[)]{.text_2}
-
+sns.FacetGrid(iris, hue='species',size=5)\
+    .map(plt.scatter,'petal_length','petal_width')\
+    .add_legend()
+plt.title('Petal values by Species')
 plt.show
 
- 
-
-[sns.pairplot(iris,
-]{.text_2}[hue]{.text_5}[=]{.text_2}["species"]{.text_4}[,
-]{.text_2}[size]{.text_5}[=]{.text_2}[3]{.text_9}[,
-]{.text_2}[diag\_kind]{.text_5}[=]{.text_2}["kde"]{.text_4}[)]{.text_2}
-
+sns.pairplot(iris, hue="species", size=3, diag_kind="kde")
 plt.show()
 
- 
-
-[radviz(iris,]{.text_2}['species']{.text_4}[)]{.text_2}
-
-[plt.title(]{.text_2}['Radial visualisation of Iris
-dataset']{.text_4}[)]{.text_2}
-
+radviz(iris,'species')
+plt.title('Radial visualisation of Iris dataset')
 plt.show()
 
- 
-
- 
-
-Appendix 2 – High level analysis script {#calibre_link-19 .block_10}
+<h2 id="app2">Appendix 2 – High level analysis script</h2>
 =======================================
+# This script is solely to return numerical data from the Iris Dataset
+# and is devoid of graphs
+#
+# Written by Seamus Leonard G00376550 26/04/2019
 
-\# This script is solely to return numerical data from the Iris Dataset
+# The script will return the following calculations:
+# Max, Min, Standard Deviation, Inter-quartile range
 
-\# and is devoid of graphs
+# first import the necessary packages
+#import os
+import pandas as pd 
+import numpy as np
 
-\#
+# the following code was sourced from:
+# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+# point to the folder where the dataset is located
+try:
+    #os.chdir('D:\\Programming and Scripting\\Project')
+    # load the dataset
+    iris = pd.read_csv('IrisDataset.csv')
+    iris.columns=['sepal_length','sepal_width','petal_length','petal_width','species']
+except:
+    print("Couldn't load the data")
 
-\# Written by Seamus Leonard G00376550 26/04/2019
+outliers=[]
 
- 
+def detect_outliers(d1):
+    # this code was taken from
+    # https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
+    threshold=3
+    mean_1=np.mean(d1)
+    std_1=np.std(d1)
+    for y in d1:
+        z_score= (y-mean_1)/std_1
+        if np.abs(z_score) > threshold:
+            outliers.append(y)
+    return outliers
 
-\# The script will return the following calculations:
-
-\# Max, Min, Standard Deviation, Inter-quartile range
-
- 
-
-\# first import the necessary packages
-
-[import]{.text_1}[ os]{.text_2}
-
-[import]{.text_1}[ pandas ]{.text_2}[as]{.text_1}[ pd ]{.text_2}
-
-[import]{.text_1}[ numpy ]{.text_2}[as]{.text_1}[ np]{.text_2}
-
- 
-
-\# the following code was sourced from:
-
-\#
-https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
-
-\# point to the folder where the dataset is located
-
-[try]{.text_1}[:]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[os.chdir(]{.text_2}['D:]{.text_4}[\\\\]{.text_7}[Programming
-and Scripting]{.text_4}[\\\\]{.text_7}[Project']{.text_4}[)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[\# load the dataset]{.text_3}
-
-[[ iris =
-]{.calibre20}]{.text_2}[pd.read\_csv(]{.text_2}['IrisDataset.csv']{.text_4}[)]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[iris.columns=\[]{.text_2}['sepal\_length']{.text_4}[,]{.text_2}['sepal\_width']{.text_4}[,]{.text_2}['petal\_length']{.text_4}[,]{.text_2}['petal\_width']{.text_4}[,]{.text_2}['species']{.text_4}[\]]{.text_2}
-
-[except]{.text_1}[:]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}["Couldn't load
-the data"]{.text_4}[)]{.text_2}
-
- 
-
-outliers=\[\]
-
- 
-
-[def]{.text_6}[
-]{.text_2}[detect\_outliers]{.text_8}[(]{.text_2}[d1]{.text_5}[):]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[\# this code was taken from]{.text_3}
-
-[[ ]{.calibre20}]{.text_2}[\#
-https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32]{.text_3}
-
-[[ threshold=]{.calibre20}]{.text_2}[3]{.text_9}
-
-[ mean\_1=]{.calibre20}np.mean(d1)
-
-[ std\_1=]{.calibre20}np.std(d1)
-
-[[ ]{.calibre20}]{.text_2}[for]{.text_1}[ y ]{.text_2}[in]{.text_6}[
-d1:]{.text_2}
-
-[ ]{.calibre20}z\_score= (y-mean\_1)/std\_1
-
-[[ ]{.calibre20}]{.text_2}[if]{.text_1}[ np.abs(z\_score) &gt;
-threshold:]{.text_2}
-
-[ ]{.calibre20}outliers.append(y)
-
-[[ ]{.calibre20}]{.text_2}[return]{.text_1}[ outliers]{.text_2}
-
- 
-
-[def]{.text_6}[
-]{.text_2}[return\_values]{.text_8}[(]{.text_2}[d1]{.text_5}[):
-]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[\# this SR is superfluous but left here to
-show how the details of .describe() can be achieved]{.text_3}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}['Mean Value:
-']{.text_4}[, np.mean(d1))]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}['Std Dev:
-']{.text_4}[, np.std(d1))]{.text_2}
-
-[[
-Q1=]{.calibre20}]{.text_2}[np.quantile(d1,]{.text_2}[0.25]{.text_9}[)]{.text_2}
-
-[[
-Q3=]{.calibre20}]{.text_2}[np.quantile(d1,]{.text_2}[0.75]{.text_9}[)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}['IQR:
-']{.text_4}[, Q3-Q1)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
- 
+def return_values(d1): 
+    # this SR is superfluous but left here to show how the details of .describe() can be achieved
+    print('Mean Value: ', np.mean(d1))
+    print('Std Dev: ', np.std(d1))
+    Q1=np.quantile(d1,0.25)
+    Q3=np.quantile(d1,0.75)
+    print('IQR: ', Q3-Q1)
+    print()
+    print()
 
 Species = iris.species.unique()
+for sp in Species:
+    # the code for deriving subsets** of datasets was learned from
+    # https://cmdlinetips.com/2018/02/how-to-subset-pandas-dataframe-based-on-values-of-a-column/
+    dt=iris[iris['species']==sp] # **
+    speciesName=dt.species.unique() #sourced from https://chrisalbon.com/python/data_wrangling/pandas_list_unique_values_in_column/
+    dt=dt.drop(columns='species')
+    print('________________________________')
+    print('  ',speciesName)
+    print('________________________________')
+    print()
+    dt.info()
+    print()
+    print(dt.describe())
+    print()
+    print()
+    print('The following information is available for the columns in this dataset')
+    print()
 
-[for]{.text_1}[ sp ]{.text_2}[in]{.text_6}[ Species:]{.text_2}
+    dsCols=list(dt.columns.values) 
+    #https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers
 
-[[ ]{.calibre20}]{.text_2}[\# the code for deriving subsets\*\* of
-datasets was learned from]{.text_3}
+    for dsC in dsCols:
+        d1=dt[dsC]
+        print(speciesName,dsC,' outliers:')
+        print(detect_outliers(d1))
+        #return_values(d1)
+        #the above line was commented out as the .describe() method provides
+        #the same details in a more tabular form
+        outliers.clear()
 
-[[ ]{.calibre20}]{.text_2}[\#
-https://cmdlinetips.com/2018/02/how-to-subset-pandas-dataframe-based-on-values-of-a-column/]{.text_3}
 
-[[ dt=iris\[iris\[]{.calibre20}]{.text_2}['species']{.text_4}[\]==sp\]
-]{.text_2}[\# \*\*]{.text_3}
 
-[[ ]{.calibre20}]{.text_2}[speciesName=dt.species.unique()
-]{.text_2}[\#sourced from
-https://chrisalbon.com/python/data\_wrangling/pandas\_list\_unique\_values\_in\_column/]{.text_3}
 
-[[
-dt=]{.calibre20}]{.text_2}[dt.drop(]{.text_2}[columns]{.text_5}[=]{.text_2}['species']{.text_4}[)]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}['\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_']{.text_4}[)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}[['
-']{.calibre20}]{.text_4}[,speciesName)]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}['\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_']{.text_4}[)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
-[ ]{.calibre20}dt.info()
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(dt.describe())]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(]{.text_2}['The following
-information is available for the columns in this
-dataset']{.text_4}[)]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[()]{.text_2}
-
- 
-
-[[
-]{.calibre20}]{.text_2}[dsCols=]{.text_2}[list]{.text_10}[(dt.columns.values)
-]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[\#https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers]{.text_3}
-
- 
-
-[[ ]{.calibre20}]{.text_2}[for]{.text_1}[ dsC ]{.text_2}[in]{.text_6}[
-dsCols:]{.text_2}
-
-[ d1=dt\[]{.calibre20}dsC\]
-
-[[ ]{.calibre20}]{.text_2}[print]{.text_8}[(speciesName,dsC,]{.text_2}['
-outliers:']{.text_4}[)]{.text_2}
-
-[[
-]{.calibre20}]{.text_2}[print]{.text_8}[(detect\_outliers(d1))]{.text_2}
-
-[[ ]{.calibre20}]{.text_2}[\#return\_values(d1)]{.text_3}
-
-[[ ]{.calibre20}]{.text_2}[\#the above line was commented out as the
-.describe() method provides]{.text_3}
-
-[[ ]{.calibre20}]{.text_2}[\#the same details in a more tabular
-form]{.text_3}
-
-[ ]{.calibre20}outliers.clear()
-
-\
- 
-
-\
-  {#section .block_10}
-=
-
-Bibliography {#calibre_link-20 .block_10}
+<h2 id="bibleo">Bibliography</h2>
 ============
 
 (anonymous), c. (2018, February 22). *How to filter Pandas dataframe by
