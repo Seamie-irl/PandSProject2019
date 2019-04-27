@@ -1,68 +1,41 @@
-<div id="calibre_link-0" class="calibre">
+#Project 2019#
 
-Project 2019
+###Programming and Scripting###
 
-Programming and Scripting
-
-Galway Mayo Institute of Technology
+##Galway Mayo Institute of Technology##
 
  
 
- 
+**Student Name:** Seamus Leonard
+
+**Student ID:** G00376550
+
+
+
+
+**Contents**
+
+<a href=#exec>Executive Summary </a>
+
+<a href=#instr>Instructions</a>
+
+<a href=#back>Background</a>
+
+<a href=#data>The Data</a>
+
+<a href=#anal>High level analysis</a>
+
+<a href=#vis>Visual analysis</a>
+
+<a href#app1>Appendix A</a>
+
+<a href=#app2>Appendix B</a>
+
+<a href=#bibleo>Bibliography</a>
 
  
 
-Seamus Leonard
-
-G00376550
-
-Contents
-
-[]{#calibre_link-21 .calibre1}[[Executive
-Summary]{.text_}](#calibre_link-1){.calibre2}
-
-[[Instructions]{.text_}](#calibre_link-2){.calibre2}
-
-[[Background]{.text_}](#calibre_link-3){.calibre2}
-
-[[The Data]{.text_}](#calibre_link-4){.calibre2}
-
-[[High Level overview]{.text_}](#calibre_link-5){.calibre2}
-
-[[Visual inspection]{.text_}](#calibre_link-6){.calibre2}
-
-[[Closer examination]{.text_}](#calibre_link-7){.calibre2}
-
-[[High level analysis]{.text_}](#calibre_link-8){.calibre2}
-
-[[The data]{.text_}](#calibre_link-9){.calibre2}
-
-[[Subsets]{.text_}](#calibre_link-10){.calibre2}
-
-[[Setosa]{.text_}](#calibre_link-11){.calibre2}
-
-[[Versicolor]{.text_}](#calibre_link-12){.calibre2}
-
-[[Virginica]{.text_}](#calibre_link-13){.calibre2}
-
-[[Conclusion]{.text_}](#calibre_link-14){.calibre2}
-
-[[Visual analysis]{.text_}](#calibre_link-15){.calibre2}
-
-[[Sepal length v. Sepal width]{.text_}](#calibre_link-16){.calibre2}
-
-[[Petal length v. Petal width]{.text_}](#calibre_link-17){.calibre2}
-
-[[Appendix A – Graph plot script]{.text_}](#calibre_link-18){.calibre2}
-
-[[Appendix 2 – High level analysis
-script]{.text_}](#calibre_link-19){.calibre2}
-
-[[Bibliography]{.text_}](#calibre_link-20){.calibre2}
-
- 
-
-Executive Summary {#calibre_link-1 .block_10}
+<h2 id="exec">Executive Summary</h2>
 =================
 
 The Iris dataset is a dataset of the measurements of petals and sepals
