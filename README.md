@@ -27,7 +27,7 @@
 
 <a href=#vis>Visual analysis</a>
 
-<a href#=app1>Appendix A</a>
+<a href=#app1>Appendix A</a>
 
 <a href=#app2>Appendix B</a>
 
@@ -85,34 +85,21 @@ The dataset has the following description
 -   \
      
 
-Instructions {#calibre_link-2 .block_10}
+<h2 id="instr">Instructions</h2>
 ============
 
 This document is paired with two pieces of software which are co-located
 in this repository. These are:
 
-<div class="calibre5">
-
-<div class="block_16">
-
-[- ]{.bullet_}[Project2019.py]{.calibre6}
-
-</div>
-
-<div class="block_17">
-
-[- ]{.bullet_}[basicData.py]{.calibre6}
-
-</div>
-
-</div>
++ Project2019.py
++ basicData.py
 
 It is important that when you are saving the software that they are
 saved in the same folder as this document.
 
 Running the software requires that you have Python installed. This
 software and installation instructions can be downloaded from
-[www.python.org](http://www.python.org){.text_}. However, if you are
+<a href=http://www.python.org>Python</a>. However, if you are
 using Python, you will need to install the PANDAS, NUMPY and SEABORN
 packages. However, if you download and install Anaconda Python
 ([www.anaconda.com](http://www.anaconda.com){.text_} ) these packages
