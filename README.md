@@ -59,17 +59,14 @@ The dataset has the following description
     each species has 50 rows of data
 -   The three species of Iris flower are:
 
-<!-- -->
 
--   *Setosa*
--   *Versicolor*
--   *Virginica*
+-   	*Setosa*
+-   	*Versicolor*
+-   	*Virginica*
 
-<!-- -->
 
 -   From the analysis further in this document we can say that:
 
-<!-- -->
 
 -   The petal length & width clearly distinguish *I. Setosa* from the
     other two species
@@ -80,9 +77,6 @@ The dataset has the following description
     measurements to identify the species of Iris flower which can be
     validated against the petal length and width
 
-<!-- -->
-
--   \
      
 
 <h2 id="instr">Instructions</h2>
@@ -94,33 +88,15 @@ in this repository. These are:
 + Project2019.py
 + basicData.py
 
-It is important that when you are saving the software that they are
-saved in the same folder as this document.
+It is important that when you are saving the software that they are saved in the same folder as this document.
 
-Running the software requires that you have Python installed. This
-software and installation instructions can be downloaded from
-<a href=http://www.python.org>Python</a>. However, if you are
-using Python, you will need to install the PANDAS, NUMPY and SEABORN
-packages. However, if you download and install Anaconda Python
-([www.anaconda.com](http://www.anaconda.com){.text_} ) these packages
-come pre-installed.
+Running the software requires that you have Python installed. This software and installation instructions can be downloaded from <a href=http://www.python.org>Python</a>. However, if you are using Python, you will need to install the PANDAS, NUMPY and SEABORN packages. However, if you download and install <a href=www.anaconda.com>Anaconda Python</a> these packages come pre-installed.
 
-Whilst the software can be run from Windows Shell (search for CMD from
-the taskbar), a useful tool which interacts well with Anaconda is CMDer
-which can be downloaded from
-[www.cmder.net](http://www.cmder.net){.text_} .
+Whilst the software can be run from Windows Shell (search for CMD from the taskbar), a useful tool which interacts well with Anaconda is CMDer  which can be downloaded from <a href=www.cmder.net>CMDer</a>.
 
-From either of these Command Line Interface tools, move to the folder
-you’ve saved this document and the scripts to using ‘CD \[path\]’. Once
-you’re in the folder enter ‘Python’ followed by a space and then the
-name of the script you wish to run. The software runs from beginning to
-end. With ‘Project2019.py’, a sequence of graphs will be displayed. In
-each instance you have the opportunity to save the graph as an image
-using the save icon (floppy disk image). However, you must close each
-graph in turn to proceed to the next graph. This is done by clicking on
-the ‘X’ at the top right of the graph screen.
+From either of these Command Line Interface tools, move to the folder you’ve saved this document and the scripts to using ‘CD \[path\]’. Once you’re in the folder enter ‘Python’ followed by a space and then the name of the script you wish to run. The software runs from beginning to end. With ‘Project2019.py’, a sequence of graphs will be displayed. In each instance you have the opportunity to save the graph as an image using the save icon (floppy disk image). However, you must close each graph in turn to proceed to the next graph. This is done by clicking on the ‘X’ at the top right of the graph screen.
 
-Background {#calibre_link-3 .block_10}
+<h2 id="back">Background</h2>
 ==========
 
 The Iris Dataset was collected by Edgar Anderson in 1935 and published
@@ -132,9 +108,7 @@ of three species of Iris flowers. The measurements taken are:
 -   Sepal length
 -   Sepal width
 
-![Image](images/000004.png){.calibre7}
-
-Photo 1 Iris Flowers (Willems, 2018)
+<img src="images/000004.png">Photo 1 Iris Flowers (Willems, 2018)</img>
 
 Fifty of these measurements were recorded for each of the three species
 of Iris flower giving a dataset of 150 rows and 5 columns. The
