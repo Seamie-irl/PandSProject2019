@@ -107,6 +107,7 @@ The Iris Dataset was collected by Edgar Anderson in 1935 and published by Ronald
 -   Sepal width
 
 ![images](images/000004.png)
+
 *Photo 1 Iris Flowers (Willems, 2018)*
 
 Fifty of these measurements were recorded for each of the three species of Iris flower giving a dataset of 150 rows and 5 columns. The measurements of width and length are decimal numbers to one decimal place precision. The fifth column holds a text value denoting which species of Iris flower the measurements are associated with.
@@ -137,6 +138,7 @@ As with any dataset, the first step in the process is to visually look through t
 Having browsed visually over the data, all columns seem to be homogenous. However, we can get Python to perform a quick overview of the data using *info()*. From this we have:
 
 ![images](images/000012.png)
+
 *Screen-grab 1 Information*
 
 This shows that:
@@ -152,6 +154,7 @@ This shows that:
 We can further see from counting the rows by ‘species’ type that:
 
 ![images](images/000002.png)
+
 *Screen-grab 2 Value Counts*
 
 This shows that the data is spread evenly amongst three values in ‘species’. Namely; ‘virginica’, ‘setosa’ and ‘versicolor’ with 50 rows of data each.
@@ -190,12 +193,14 @@ The output from this analysis is as follows:
 ### Setosa ###
 
 ![images](images/000003.png)
+
 *Screen-grab 3 - Statistical Values Setosa*
  
 
 ### Versicolor ###
 
 ![image](images/000006.png)
+
 *Screen-grab 4 Statistical Values Versicolor*
 
  
