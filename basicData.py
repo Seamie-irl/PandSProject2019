@@ -7,7 +7,7 @@
 # Max, Min, Standard Deviation, Inter-quartile range
 
 # first import the necessary packages
-import os
+#import os
 import pandas as pd 
 import numpy as np
 
@@ -15,7 +15,7 @@ import numpy as np
 # https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
 # point to the folder where the dataset is located
 try:
-    os.chdir('D:\\Programming and Scripting\\Project')
+    #os.chdir('D:\\Programming and Scripting\\Project')
     # load the dataset
     iris = pd.read_csv('IrisDataset.csv')
     iris.columns=['sepal_length','sepal_width','petal_length','petal_width','species']

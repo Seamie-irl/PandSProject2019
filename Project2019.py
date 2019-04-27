@@ -1,4 +1,4 @@
-# This script processes the Fisher Iris Dataset
+# This script provides graphs for the Fisher Iris Dataset
 # Seamus Leonard 12/04/2019
 # 
 
