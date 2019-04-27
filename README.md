@@ -225,7 +225,7 @@ As a result of this, the raw data would suggest that we may be able to distingui
 
 Whereas a visual inspection of raw data will give us an understanding of the integrity of the data, using python, we can start to examine the Iris dataset at a high level visually. Being able to see how the data is represented on a graph gives us a more immediate decision on what the data is telling us.
 
-Sepal length v. Sepal width 
+### Sepal length v. Sepal width ###
 ---------------------------
 
 Plotting all values in Sepal length against Sepal width we get:
@@ -245,7 +245,7 @@ At first glance in Graph 1, we can see that the data largely aggregates into two
 This shows us that our first observation above was correct in that the values which aggregated into the upper left quadrant belong to one species (*Setosa*) This group would appear to have few outliers. Furthermore, in the more scattered second group in the lower left and right quadrants, we can now see that within this range are two fairly distinct groups with those in the lower left quadrant belonging predominantly to *Versicolor* and the remainder belonging to
 *Virginica*. However, the values for *Virginica* are well scattered.
 
-### Petal length v. Petal width###
+### Petal length v. Petal width ###
 ---------------------------
 
 Similarly, plotting all values in Petal length against Petal width we get:
@@ -266,22 +266,6 @@ The above graph shows us more clearly that species *Setosa* again is a distinct 
 
 ![Image](images/000008.png)
 
-Sepal length
-
-Sepal length
-
-Sepal width
-
-Sepal width
-
-Petal length
-
-Petal length
-
-Petal width
-
-Petal width
-
 *Graph 5 Graph-Grid of all variables*
 
  
@@ -293,47 +277,47 @@ From the above grid of plots it is clear that from this dataset we can identify 
 
 <h2 id="app1">Appendix A – Graph plot script </h2>
 ==============================
-# This script provides graphs for the Fisher Iris Dataset
-# Seamus Leonard 12/04/2019
-# 
+&# This script provides graphs for the Fisher Iris Dataset
+&# Seamus Leonard 12/04/2019
+&# 
 
-#Set working directory and load data
+&#Set working directory and load data
 
-# import packages
-#import os
+&# import packages
+&#import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import warnings # apparently seaborn generates a lot of warnings. This line and the next ignores them
+import warnings &# apparently seaborn generates a lot of warnings. This line and the next ignores them
 warnings.filterwarnings('ignore')
-import seaborn as sns # this is a visualisation package based on matplotlib https://seaborn.pydata.org/
-# set the plot background to white
+import seaborn as sns &# this is a visualisation package based on matplotlib https://seaborn.pydata.org/
+&# set the plot background to white
 from pandas.tools.plotting import radviz
 
 sns.set(style="white", color_codes=True)
 
-# the following code was sourced from:
-# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
-# point to the folder where the dataset is located
+&# the following code was sourced from:
+&# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+&# point to the folder where the dataset is located
 try:
-    # os.chdir('D:\\Programming and Scripting\\Project')
-    # load the dataset
+    &# os.chdir('D:\\Programming and Scripting\\Project')
+    &# load the dataset
     iris = pd.read_csv('IrisDataset.csv')
     iris.columns=['sepal_length','sepal_width','petal_length','petal_width','species']
 except:
     print("Couldn't load the data")
-# keep the user informed of the state of the process
+&# keep the user informed of the state of the process
 print('Data loaded')
 print()
-# the following code was sourced from:
-# https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
-# provide the user with an overview of the dataset
+&# the following code was sourced from:
+&# https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
+&# provide the user with an overview of the dataset
 print(iris.info())
 print()
-# provided the user with a high-level report on data breakdown
+&# provided the user with a high-level report on data breakdown
 print(iris['species'].value_counts())
 
-# the following code was sourced from:
-#http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
+&# the following code was sourced from:
+&#http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
 
 iris.plot(kind='scatter',x='sepal_length', y='sepal_width')
 plt.title('Sepal Values - all Species')
@@ -364,25 +348,25 @@ plt.show()
 
 <h2 id="app2">Appendix 2 – High level analysis script</h2>
 =======================================
-# This script is solely to return numerical data from the Iris Dataset
-# and is devoid of graphs
-#
-# Written by Seamus Leonard G00376550 26/04/2019
+&# This script is solely to return numerical data from the Iris Dataset
+&# and is devoid of graphs
+&#
+&# Written by Seamus Leonard G00376550 26/04/2019
 
-# The script will return the following calculations:
-# Max, Min, Standard Deviation, Inter-quartile range
+&# The script will return the following calculations:
+&# Max, Min, Standard Deviation, Inter-quartile range
 
-# first import the necessary packages
-#import os
+&# first import the necessary packages
+&#import os
 import pandas as pd 
 import numpy as np
 
-# the following code was sourced from:
-# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
-# point to the folder where the dataset is located
+&# the following code was sourced from:
+&# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+&# point to the folder where the dataset is located
 try:
-    #os.chdir('D:\\Programming and Scripting\\Project')
-    # load the dataset
+    &#os.chdir('D:\\Programming and Scripting\\Project')
+    &# load the dataset
     iris = pd.read_csv('IrisDataset.csv')
     iris.columns=['sepal_length','sepal_width','petal_length','petal_width','species']
 except:
@@ -391,8 +375,8 @@ except:
 outliers=[]
 
 def detect_outliers(d1):
-    # this code was taken from
-    # https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
+    &# this code was taken from
+    &# https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
     threshold=3
     mean_1=np.mean(d1)
     std_1=np.std(d1)
@@ -403,7 +387,7 @@ def detect_outliers(d1):
     return outliers
 
 def return_values(d1): 
-    # this SR is superfluous but left here to show how the details of .describe() can be achieved
+    &# this SR is superfluous but left here to show how the details of .describe() can be achieved
     print('Mean Value: ', np.mean(d1))
     print('Std Dev: ', np.std(d1))
     Q1=np.quantile(d1,0.25)
@@ -414,10 +398,10 @@ def return_values(d1):
 
 Species = iris.species.unique()
 for sp in Species:
-    # the code for deriving subsets** of datasets was learned from
-    # https://cmdlinetips.com/2018/02/how-to-subset-pandas-dataframe-based-on-values-of-a-column/
-    dt=iris[iris['species']==sp] # **
-    speciesName=dt.species.unique() #sourced from https://chrisalbon.com/python/data_wrangling/pandas_list_unique_values_in_column/
+    &# the code for deriving subsets** of datasets was learned from
+    &# https://cmdlinetips.com/2018/02/how-to-subset-pandas-dataframe-based-on-values-of-a-column/
+    dt=iris[iris['species']==sp] &# **
+    speciesName=dt.species.unique() &#sourced from https://chrisalbon.com/python/data_wrangling/pandas_list_unique_values_in_column/
     dt=dt.drop(columns='species')
     print('________________________________')
     print('  ',speciesName)
@@ -432,15 +416,15 @@ for sp in Species:
     print()
 
     dsCols=list(dt.columns.values) 
-    #https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers
+    &#https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers
 
     for dsC in dsCols:
         d1=dt[dsC]
         print(speciesName,dsC,' outliers:')
         print(detect_outliers(d1))
-        #return_values(d1)
-        #the above line was commented out as the .describe() method provides
-        #the same details in a more tabular form
+        &#return_values(d1)
+        &#the above line was commented out as the .describe() method provides
+        &#the same details in a more tabular form
         outliers.clear()
 
 
