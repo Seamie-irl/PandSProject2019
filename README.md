@@ -1,8 +1,8 @@
-#Project 2019#
+# Project 2019 #
 
-###Programming and Scripting###
+### Programming and Scripting ###
 
-##Galway Mayo Institute of Technology##
+## Galway Mayo Institute of Technology ##
 
  
 
@@ -27,7 +27,7 @@
 
 <a href=#vis>Visual analysis</a>
 
-<a href#app1>Appendix A</a>
+<a href#=app1>Appendix A</a>
 
 <a href=#app2>Appendix B</a>
 
