@@ -195,11 +195,11 @@ The output from this analysis is as follows:
 
  
 
-### Virginica {#calibre_link-13 .block_25}
+### Virginica ###
 
-![Image](images/000007.png){.calibre12}
+![Image](images/000007.png)
 
-Screen-grab 5 Statistical Values Virginica
+*Screen-grab 5 Statistical Values Virginica*
 
 \
  
