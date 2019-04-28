@@ -44,7 +44,7 @@ Due to the integrity and uniformity of the dataset and the clear relationship be
 
 The dataset has the following description
 
--   There are 150 rows of data in 4 columns (excluding the species name column)
+-   There are 150 rows of data in 4 columns containing decimal values (excluding the species name column)
 -   The data is divided evenly between three species of flower such that each species has 50 rows of data
 -   The three species of Iris flower are:
 
@@ -229,7 +229,7 @@ Outliers
 ### Conclusion ###
 ----------
 
-In summary, in the Iris dataset there are four numerical variables and one categorical variable with 50 rows of data in each category and no null values. Except for one value in one species, there are no outliers, no errors and no null values in the dataset.
+In summary, in the Iris dataset there are four numerical variables and one categorical variable with 50 rows of data in each category and no null values. There are outliers in the dataset in with fewer using the IQR as the standard than when using the Z-Score though these outliers are not unexpected.
 
 As a result of this, the raw data would suggest that we may be able to distinguish between three species of the Iris flower based on four measurements. However, whilst looking at the statistical data values will assist the reader in understanding the differences between the Iris species, it is in visualising the data; seeing how the data is displayed on a chart that the reader can immediately tell the differences in the data.
 
@@ -285,11 +285,31 @@ The above graph shows us more clearly that species *Setosa* again is a distinct 
 
 From the above grid of plots it is clear that from this dataset we can identify the species of Iris based on the interrelationship between the Sepal length, Septal width, Petal length and Petal width. This is more clearly shown in the radial visualisation plot below:
 
-![Image](images/000000.png){.calibre19}\
+![Image](images/000000.png)
+
+*Radial Visualisation of all variables*
+
+
+## Outcomes from the analysis ##
+---------------------------
+
+The Iris Dataset is a uniform set of data based on the petal and sepal dimensions of three species of the Iris flower. Containing 150 rows of data equally divided amongst the three species, there are no discernible data errors and no NULL values.
+
+Whilst the dataset does have outliers, these are not sufficiently remote as to warrant exclusion or consideration as errors.
+
+Ideally, it would appear that an algorithm for deriving the species of the flower based on its petal and sepal dimensions should be possible. Indeed, Santos (2018) proposes such an algorithm as described in the image below:
+
+![image](images/000025.png)
+
+*Decision Tree (Santos 2018)*
+
  
 
 <h2 id="app1">Appendix A – Graph plot script </h2>
 ==============================
+
+'''
+
 &# This script provides graphs for the Fisher Iris Dataset
 &# Seamus Leonard 12/04/2019
 &# 
@@ -401,6 +421,8 @@ radviz(iris,'species')
 plt.title('Radial visualisation of Iris dataset')
 
 plt.show()
+
+'''
 
 <h2 id="app2">Appendix 2 – High level analysis script</h2>
 =======================================
@@ -536,9 +558,13 @@ Mittapalli, H. (2018, December 24). *Exploratory Data Analysis: Iris
 Dataset*. Retrieved from Medium.com:
 https://medium.com/@harimittapalli/exploratory-data-analysis-iris-dataset-9920ea439a3e
 
-Renze, J. (2019, April 23. *Outlier*.
+Renze, J. (2019, April 23). *Outlier*.
 Retrieved from mathworld.wolfram.com:
 http://mathworld.wolfram.com/Outlier.html
+
+Santos, R. (2018, April 23). *Data Science Example - Iris Dataset*
+Retrieved from Computing and Aplicated math National Institute of Space Research (http://www.lac.inpe.br/)
+http://www.lac.inpe.br/~rafael.santos/Docs/R/CAP394/WholeStory-Iris.html
 
 Waskom, M. (2018). *seaborn: statistical data visualisation*. Retrieved
 from seaborn: statistical data visualisation: https://seaborn.pydata.org
