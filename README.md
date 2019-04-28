@@ -168,7 +168,7 @@ From ‘Screen Grab 2 Value Counts’ above, we can see there are three distinct
 -   Versicolor
 
 Using the modules PANDAS and NUMPY within Python, we can import the data, examine it for outliers and report on the variables (Min, Max, Mean, StDev & IQR). An 
-outlier was described by Moore and McCabe (1999) as an observation which lies outside the overall pattern of a distribution. 
+outlier was described by Moore and McCabe (1999) as an observation which lies outside the overall pattern of a distribution. Renze J. (2019) states that "a convenient definition of an outlier is a point which falls more than 1.5 times the Interquartile Range (IQR) above the third quartile or below the first quartile". This definition is based on using the IQR as the standard of measurement. An outlier was also described by Khandelwal R. (2018) as being "a data point in a dataset that is distant from all other observations. A data point that lies outside the overall distribution of the dataset". However, whilst Khandelwal also defines an outlier as being 1.5 times the IQR, he also uses the Z-Score as the standard of measurement. The Z-Score is based on the Standard Deviation and a data point is considered an outlier if it is more than 2 Standard Deviations from the mean (Khandelwal 2018). The appropriateness of their use is dependent on the type of data being observed and the influencers. For example, in measurements centred around a mean (such as length, width or height) using the StDev as the measure is appropriate as the distribution is normally approximate to a bell-curve. However, where the distribution isn't a bell-curve (such as volume of traffic during the day which would show three peaks at morning, lunch and evening), using the IQR as the measure is usually more appropriate.
 
 The script in Appendix B was designed such that (with little modification) it can be used on any similar dataset containing numerical variables for given groups.
 
@@ -487,9 +487,17 @@ Endrinal, F. (2017, September 5). *Exploring the Iris Dataset*.
 Retrieved from Medium:
 https://medium.com/@livingwithdata/exploring-the-iris-dataset-260cc1e5cdf7
 
+Gupta, M. (Date unknown). Accessed 2019, April 28. *Boxplot and Histogram exploration on Iris Data*
+Retrieved from geeksforgeeks.org:
+https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
+
 Joseph, R. (2018, July 16). *Neural network on iris data*. Retrieved
 from Towards Data Science:
 https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+
+Khandelwal, R. (2018, September 23). *Finding Outliers in dataset using Python*
+Retrieved from Medium.com:
+https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
 
 Maglaras, Y. (2018, February 19). *What Machine Learning is Great For*.
 Retrieved from Digital List:
@@ -499,7 +507,7 @@ Mittapalli, H. (2018, December 24). *Exploratory Data Analysis: Iris
 Dataset*. Retrieved from Medium.com:
 https://medium.com/@harimittapalli/exploratory-data-analysis-iris-dataset-9920ea439a3e
 
-Renze, J. (2019, April 23. "Outlier".
+Renze, J. (2019, April 23. *Outlier*.
 Retrieved from mathworld.wolfram.com:
 http://mathworld.wolfram.com/Outlier.html
 

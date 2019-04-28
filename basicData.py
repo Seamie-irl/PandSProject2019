@@ -25,7 +25,7 @@ except: #error trapped if the file didn't load
 
 outliers=[] # creates the array for outliers
 
-def detect_outliers(d1): # takes the data subset (by species) and processes it within the definition
+def detect_outliers_IQR(d1): # takes the data subset (by species) and processes it within the definition
     # this code was taken from
     # https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
     mean_1=np.mean(d1) # derive the average (mean) value
@@ -37,6 +37,18 @@ def detect_outliers(d1): # takes the data subset (by species) and processes it w
     # the above calculations are derived from statments in http://mathworld.wolfram.com/Outlier.html
     for y in d1: # loops through the data in the data subset
         if y<lThreshold or y>uThreshold: # tests for outliers exceeding the bound markers
+            outliers.append(y) # outlier found - add to the Outlier array
+    return outliers # on completion of the loop send back the array of outliers
+
+def detect_outliers_ZScore(d1): # takes the data subset (by species) and processes it within the definition
+    # this code was taken from
+    # https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
+    mean_1=np.mean(d1) # derive the average (mean) value
+    std_1=np.std(d1) # derive the standard deviation value
+    threshold=2
+    for y in d1: # loops through the data in the data subset
+        z_score= (y-mean_1)/std_1 # calculate the Z-Score
+        if np.abs(z_score) > threshold: # tests for outliers exceeding Z-Score
             outliers.append(y) # outlier found - add to the Outlier array
     return outliers # on completion of the loop send back the array of outliers
 
@@ -80,9 +92,15 @@ for sp in Species: # loops through the three species types
 
     for dsC in dsCols: # goes through each column in the data subset
         d1=dt[dsC] # creates a single column data subset from the species data subset
-        print(speciesName,dsC,' outliers:')
-        print(detect_outliers(d1)) # hands this single column data subset to the Outlier SR
+        print(speciesName,dsC,' Outliers based on IQR:')
+        print(detect_outliers_IQR(d1)) # hands this single column data subset to the IQR Outlier SR
         print()
+        outliers.clear() # resets the outliers array for re-use
+        print(speciesName,dsC,' Outliers based on Z-Score:')
+        print(detect_outliers_ZScore(d1)) # hands this single column data subset to the Z-Scrore Outlier SR
+        print()
+        outliers.clear() #resets the outliers array for re-use
+        #  histogram code sourced from https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/
         plt.figure(figsize=(10,7)) # set the sizes in the graph
         x=d1 # point to the single column data subset
         plt.hist(x,bins=20,color="blue") # set the graph as a histogram in blue
@@ -93,6 +111,5 @@ for sp in Species: # loops through the three species types
         #return_values(d1)
         #the above line was commented out as the .describe() method provides
         #the same details in a more tabular form
-        outliers.clear() # resets the outliers[] array for the next iteration of the loop
 
 
