@@ -178,29 +178,51 @@ The output from this analysis is as follows:
 
 Statistical values
 
-![images](images/000003.png)
+![image](images/000003.png)
 
 *Screen-grab 3 - Statistical Values Setosa*
  
 
 Outliers
 
-![images](images/000003a.png)
+![image](images/000003a.png)
+
 *Screen-grab 3a - Outliers in Setosa*
 
+
+
 ### Versicolor ###
+
+Statistical values
 
 ![image](images/000006.png)
 
 *Screen-grab 4 Statistical Values Versicolor*
 
+
+Outliers
+
+![image](images/000006a.png)
+
+*Screen-grab 4a Outliers in Versicolor*
+
  
 
 ### Virginica ###
 
+Statistical Values
+
 ![Image](images/000007.png)
 
 *Screen-grab 5 Statistical Values Virginica*
+
+
+Outliers
+
+![image](images/000007a.png)
+
+*Screen-grab 5a Outliers in Virginica*
+
 
  
 
