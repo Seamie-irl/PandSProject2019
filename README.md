@@ -182,6 +182,7 @@ Statistical values
 
 *Screen-grab 3 - Statistical Values Setosa*
  
+
 Outliers
 
 ![images](images/000003a.png)
