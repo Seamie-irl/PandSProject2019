@@ -1,5 +1,4 @@
 # This script is solely to return numerical data from the Iris Dataset
-# and is devoid of graphs
 #
 # Written by Seamus Leonard G00376550 26/04/2019
 
