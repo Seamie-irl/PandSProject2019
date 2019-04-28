@@ -176,10 +176,16 @@ The output from this analysis is as follows:
 
 ### Setosa ###
 
+Statistical values
+
 ![images](images/000003.png)
 
 *Screen-grab 3 - Statistical Values Setosa*
  
+Outliers
+
+![images](images/000003a.png)
+*Screen-grab 3a - Outliers in Setosa*
 
 ### Versicolor ###
 
