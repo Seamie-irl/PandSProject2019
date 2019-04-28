@@ -310,43 +310,43 @@ Ideally, it would appear that an algorithm for deriving the species of the flowe
 
 ```
 
-&# This script provides graphs for the Fisher Iris Dataset
-&# Seamus Leonard 12/04/2019
-&# 
+# This script provides graphs for the Fisher Iris Dataset
+# Seamus Leonard 12/04/2019
+# 
 
-&#Set working directory and load data
+#Set working directory and load data
 
-&# import packages
+# import packages
 
-&# import os
+# import os
  
 import pandas as pd
 
 import matplotlib.pyplot as plt
 
-import warnings &# apparently seaborn generates a lot of warnings. This line and the next ignores them
+import warnings # apparently seaborn generates a lot of warnings. This line and the next ignores them
 
 warnings.filterwarnings('ignore')
 
-import seaborn as sns &# this is a visualisation package based on matplotlib https://seaborn.pydata.org/
+import seaborn as sns # this is a visualisation package based on matplotlib https://seaborn.pydata.org/
 
-&# set the plot background to white
+# set the plot background to white
 
 from pandas.tools.plotting import radviz
 
 sns.set(style="white", color_codes=True)
 
-&# the following code was sourced from:
+# the following code was sourced from:
 
-&# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
 
-&# point to the folder where the dataset is located
+# point to the folder where the dataset is located
 
 try:
 
-    &# os.chdir('D:\\Programming and Scripting\\Project')
+    # os.chdir('D:\\Programming and Scripting\\Project')
 
-    &# load the dataset
+    # load the dataset
 
     iris = pd.read_csv('IrisDataset.csv')
 
@@ -356,29 +356,29 @@ except:
     
 print("Couldn't load the data")
 
-&# keep the user informed of the state of the process
+# keep the user informed of the state of the process
 
 print('Data loaded')
 
 print()
 
-&# the following code was sourced from:
+# the following code was sourced from:
 
-&# https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
+# https://www.kaggle.com/jchen2186/machine-learning-with-iris-dataset
 
-&# provide the user with an overview of the dataset
+# provide the user with an overview of the dataset
 
 print(iris.info())
 
 print()
 
-&# provided the user with a high-level report on data breakdown
+# provided the user with a high-level report on data breakdown
 
 print(iris['species'].value_counts())
 
-&# the following code was sourced from:
+# the following code was sourced from:
 
-&#http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
+#http://www.learn4master.com/machine-learning/visualize-iris-dataset-using-python
 
 iris.plot(kind='scatter',x='sepal_length', y='sepal_width')
 
@@ -426,25 +426,28 @@ plt.show()
 
 <h2 id="app2">Appendix 2 – High level analysis script</h2>
 =======================================
-&# This script is solely to return numerical data from the Iris Dataset
-&# and is devoid of graphs
-&#
-&# Written by Seamus Leonard G00376550 26/04/2019
 
-&# The script will return the following calculations:
-&# Max, Min, Standard Deviation, Inter-quartile range
+```
 
-&# first import the necessary packages
-&#import os
+# This script is solely to return numerical data from the Iris Dataset
+# and is devoid of graphs
+#
+# Written by Seamus Leonard G00376550 26/04/2019
+
+# The script will return the following calculations:
+# Max, Min, Standard Deviation, Inter-quartile range
+
+# first import the necessary packages
+#import os
 import pandas as pd 
 import numpy as np
 
-&# the following code was sourced from:
-&# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
-&# point to the folder where the dataset is located
+# the following code was sourced from:
+# https://towardsdatascience.com/neural-network-on-iris-data-4e99601a42c8
+# point to the folder where the dataset is located
 try:
-    &#os.chdir('D:\\Programming and Scripting\\Project')
-    &# load the dataset
+    #os.chdir('D:\\Programming and Scripting\\Project')
+    # load the dataset
     iris = pd.read_csv('IrisDataset.csv')
     iris.columns=['sepal_length','sepal_width','petal_length','petal_width','species']
 except:
@@ -453,8 +456,8 @@ except:
 outliers=[]
 
 def detect_outliers(d1):
-    &# this code was taken from
-    &# https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
+    # this code was taken from
+    # https://medium.com/datadriveninvestor/finding-outliers-in-dataset-using-python-efc3fce6ce32
     threshold=3
     mean_1=np.mean(d1)
     std_1=np.std(d1)
@@ -465,7 +468,7 @@ def detect_outliers(d1):
     return outliers
 
 def return_values(d1): 
-    &# this SR is superfluous but left here to show how the details of .describe() can be achieved
+    # this SR is superfluous but left here to show how the details of .describe() can be achieved
     print('Mean Value: ', np.mean(d1))
     print('Std Dev: ', np.std(d1))
     Q1=np.quantile(d1,0.25)
@@ -476,10 +479,10 @@ def return_values(d1):
 
 Species = iris.species.unique()
 for sp in Species:
-    &# the code for deriving subsets** of datasets was learned from
-    &# https://cmdlinetips.com/2018/02/how-to-subset-pandas-dataframe-based-on-values-of-a-column/
-    dt=iris[iris['species']==sp] &# **
-    speciesName=dt.species.unique() &#sourced from https://chrisalbon.com/python/data_wrangling/pandas_list_unique_values_in_column/
+    # the code for deriving subsets** of datasets was learned from
+    # https://cmdlinetips.com/2018/02/how-to-subset-pandas-dataframe-based-on-values-of-a-column/
+    dt=iris[iris['species']==sp] # **
+    speciesName=dt.species.unique() #sourced from https://chrisalbon.com/python/data_wrangling/pandas_list_unique_values_in_column/
     dt=dt.drop(columns='species')
     print('________________________________')
     print('  ',speciesName)
@@ -494,19 +497,18 @@ for sp in Species:
     print()
 
     dsCols=list(dt.columns.values) 
-    &#https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers
+    #https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers
 
     for dsC in dsCols:
         d1=dt[dsC]
         print(speciesName,dsC,' outliers:')
         print(detect_outliers(d1))
-        &#return_values(d1)
-        &#the above line was commented out as the .describe() method provides
-        &#the same details in a more tabular form
+        #return_values(d1)
+        #the above line was commented out as the .describe() method provides
+        #the same details in a more tabular form
         outliers.clear()
 
-
-
+```
 
 <h2 id="bibleo">Bibliography</h2>
 ============
