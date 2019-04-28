@@ -2,7 +2,7 @@
 # Seamus Leonard 12/04/2019
 # 
 
-#Set working directory and load data
+#Set working directory and load data.
 
 # import packages
 import pandas as pd # import the PANDAS package

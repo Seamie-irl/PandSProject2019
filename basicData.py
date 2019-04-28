@@ -3,7 +3,7 @@
 # Written by Seamus Leonard G00376550 26/04/2019
 
 # The script will return the following calculations:
-# Max, Min, Standard Deviation, Inter-quartile range
+# Max, Min, Standard Deviation, Inter-quartile range.
 
 # first import the necessary packages
 #import os
