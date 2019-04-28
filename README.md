@@ -38,25 +38,14 @@
 <h2 id="exec">Executive Summary</h2>
 =================
 
-The Iris dataset is a dataset of the measurements of petals and sepals
-of three species of Iris flowers. Published in 1936 by Ronald Fisher, it
-has become more fully known as the Fisher Iris Dataset. There are
-purportedly a number of versions of the dataset, some with stated
-errors.
+The Iris dataset is a dataset of the measurements of petals and sepals of three species of Iris flowers. Published in 1936 by Ronald Fisher, it has become more fully known as the Fisher Iris Dataset. There are purportedly a number of versions of the dataset, some with stated errors.
 
-Due to the integrity and uniformity of the dataset and the clear
-relationship between the values and the respective species of Iris
-flower, it is used as a dataset for Machine Learning. However, this
-document is designed to inform the reader about the dataset itself such
-that the reader can, without having viewed the dataset, talk with
-confidence of its contents.
+Due to the integrity and uniformity of the dataset and the clear relationship between the values and the respective species of Iris flower, it is used as a dataset for Machine Learning. However, this document is designed to inform the reader about the dataset itself such that the reader can, without having viewed the dataset, talk with confidence of its contents.
 
 The dataset has the following description
 
--   There are 150 rows of data in 4 columns (excluding the species name
-    column)
--   The data is divided evenly between three species of flower such that
-    each species has 50 rows of data
+-   There are 150 rows of data in 4 columns (excluding the species name column)
+-   The data is divided evenly between three species of flower such that each species has 50 rows of data
 -   The three species of Iris flower are:
 
 
@@ -68,22 +57,16 @@ The dataset has the following description
 -   From the analysis further in this document we can say that:
 
 
--   The petal length & width clearly distinguish *I. Setosa* from the
-    other two species
--   The remaining two species (*I. Versicolor & I. Virginica*) can be
-    distinguished with reasonable confidence based on cross-comparison
-    of the petal and sepal dimensions.
--   More specifically, it is possible, with sepal width and length
-    measurements to identify the species of Iris flower which can be
-    validated against the petal length and width
+-   The petal length & width clearly distinguish *I. Setosa* from the other two species
+-   The remaining two species (*I. Versicolor & I. Virginica*) can be distinguished with reasonable confidence based on cross-comparison of the petal and sepal dimensions.
+-   More specifically, it is possible, with sepal width and length measurements to identify the species of Iris flower which can be validated against the petal length and width
 
      
 
 <h2 id="instr">Instructions</h2>
 ============
 
-This document is paired with two pieces of software which are co-located
-in this repository. These are:
+This document is paired with two pieces of software which are co-located in this repository. These are:
 
 + Project2019.py
 + basicData.py
@@ -184,7 +167,8 @@ From ‘Screen Grab 2 Value Counts’ above, we can see there are three distinct
 -   Virginica
 -   Versicolor
 
-Using the modules PANDAS and NUMPY within Python, we can import the data, examine it for outliers and report on the variables (Min, Max, Mean, StDev & IQR)
+Using the modules PANDAS and NUMPY within Python, we can import the data, examine it for outliers and report on the variables (Min, Max, Mean, StDev & IQR). An 
+outlier was described by Moore and McCabe (1999) as an observation which lies outside the overall pattern of a distribution. 
 
 The script in Appendix B was designed such that (with little modification) it can be used on any similar dataset containing numerical variables for given groups.
 
@@ -514,6 +498,10 @@ https://digitalist.global/talks/machine-learning-great/
 Mittapalli, H. (2018, December 24). *Exploratory Data Analysis: Iris
 Dataset*. Retrieved from Medium.com:
 https://medium.com/@harimittapalli/exploratory-data-analysis-iris-dataset-9920ea439a3e
+
+Renze, J. (2019, April 23. "Outlier".
+Retrieved from mathworld.wolfram.com:
+http://mathworld.wolfram.com/Outlier.html
 
 Waskom, M. (2018). *seaborn: statistical data visualisation*. Retrieved
 from seaborn: statistical data visualisation: https://seaborn.pydata.org
