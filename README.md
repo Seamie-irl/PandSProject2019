@@ -308,7 +308,7 @@ Ideally, it would appear that an algorithm for deriving the species of the flowe
 <h2 id="app1">Appendix A – Graph plot script </h2>
 ==============================
 
-'''
+```
 
 &# This script provides graphs for the Fisher Iris Dataset
 &# Seamus Leonard 12/04/2019
@@ -422,7 +422,7 @@ plt.title('Radial visualisation of Iris dataset')
 
 plt.show()
 
-'''
+```
 
 <h2 id="app2">Appendix 2 – High level analysis script</h2>
 =======================================
